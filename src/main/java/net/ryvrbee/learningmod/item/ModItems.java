@@ -14,6 +14,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> TWIG = ITEMS.register("twig",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> WOITR = ITEMS.register("woitr",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> WOITR_GEM = ITEMS.register("woitr_gem",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
