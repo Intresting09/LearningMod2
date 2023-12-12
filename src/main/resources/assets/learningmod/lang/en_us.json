@@ -2,5 +2,9 @@
   "item.learningmod.twig": "Twig",
   "item.learningmod.woitr": "Raw Woitr",
   "item.learningmod.woitr_gem": "Woitr Gem",
+
+  "block.learningmod.raw_woitr_block": "Raw Woitr Block",
+  "block.learningmod.woitr_gem_block": "Woitr Gem Block",
+
   "creativetab.learning_tab": "Learning Shit"
 }

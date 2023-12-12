@@ -7,6 +7,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
+import net.ryvrbee.learningmod.block.ModBlocks;
 import net.ryvrbee.learningmod.item.ModItems;
 
 public class ModCreativeModeTabs {
@@ -20,6 +21,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.TWIG.get());
                         pOutput.accept(ModItems.WOITR.get());
                         pOutput.accept(ModItems.WOITR_GEM.get());
+                        pOutput.accept(ModBlocks.RAW_WOITR_BLOCK.get());
+                        pOutput.accept(ModBlocks.WOITR_GEM_BLOCK.get());
 
                     })
                     .build());
