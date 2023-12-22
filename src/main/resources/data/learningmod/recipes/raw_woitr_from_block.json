@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "catecory": "misc",
+  "ingredients": [
+    {
+      "item": "learningmod:raw_woitr_block"
+    }
+  ],
+  "result": {
+    "item": "learningmod:woitr",
+    "count": 9
+  }
+}

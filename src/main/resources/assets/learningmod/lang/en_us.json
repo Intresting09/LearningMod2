@@ -2,9 +2,14 @@
   "item.learningmod.twig": "Twig",
   "item.learningmod.woitr": "Raw Woitr",
   "item.learningmod.woitr_gem": "Woitr Gem",
+  "item.learningmod.woitr_wand": "Woitr Wand",
+  "item.learningmod.pizza": "Pizza",
 
   "block.learningmod.raw_woitr_block": "Raw Woitr Block",
   "block.learningmod.woitr_gem_block": "Woitr Gem Block",
+  "block.learningmod.woitr_ore": "Woitr Ore",
+
+  "tooltip.learningmod.woitr_wand": "Waterlogs blocks",
 
   "creativetab.learning_tab": "Learning Shit"
 }

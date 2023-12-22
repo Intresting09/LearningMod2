@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 400,
+  "experience": 0.5,
+  "group": "woitr",
+  "ingredient": {
+    "item": "learningmod:woitr"
+  },
+  "result": "learningmod:woitr_gem"
+}

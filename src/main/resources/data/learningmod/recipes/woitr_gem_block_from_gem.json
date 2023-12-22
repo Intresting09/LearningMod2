@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "learningmod:woitr_gem"
+    }
+  },
+  "result": {
+    "item": "learningmod:woitr_gem_block"
+  }
+}

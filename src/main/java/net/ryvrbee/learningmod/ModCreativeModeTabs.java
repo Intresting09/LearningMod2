@@ -18,11 +18,15 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.WOITR_GEM.get()))
                     .title(Component.translatable("creativetab.learning_tab"))
                     .displayItems((pParameters, pOutput) -> {
+                        pOutput.accept(ModItems.PIZZA.get());
                         pOutput.accept(ModItems.TWIG.get());
                         pOutput.accept(ModItems.WOITR.get());
                         pOutput.accept(ModItems.WOITR_GEM.get());
+                        pOutput.accept(ModItems.WOITR_WAND.get());
+
                         pOutput.accept(ModBlocks.RAW_WOITR_BLOCK.get());
                         pOutput.accept(ModBlocks.WOITR_GEM_BLOCK.get());
+                        pOutput.accept(ModBlocks.WOITR_ORE.get());
 
                     })
                     .build());
