@@ -20,13 +20,25 @@ public class ModCreativeModeTabs {
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.PIZZA.get());
                         pOutput.accept(ModItems.TWIG.get());
+                        pOutput.accept(ModBlocks.WOITR_ORE.get());
                         pOutput.accept(ModItems.WOITR.get());
-                        pOutput.accept(ModItems.WOITR_GEM.get());
+                        pOutput.accept(ModBlocks.RAW_WOITR_BLOCK.get());
                         pOutput.accept(ModItems.WOITR_WAND.get());
 
-                        pOutput.accept(ModBlocks.RAW_WOITR_BLOCK.get());
+                        pOutput.accept(ModItems.WOITR_GEM.get());
                         pOutput.accept(ModBlocks.WOITR_GEM_BLOCK.get());
-                        pOutput.accept(ModBlocks.WOITR_ORE.get());
+
+                        pOutput.accept(ModBlocks.WOITR_STAIRS.get());
+                        pOutput.accept(ModBlocks.WOITR_SLAB.get());
+                        pOutput.accept(ModBlocks.WOITR_BUTTON.get());
+                        pOutput.accept(ModBlocks.WOITR_PRESSURE_PLATE.get());
+                        pOutput.accept(ModBlocks.WOITR_FENCE.get());
+                        pOutput.accept(ModBlocks.WOITR_FENCE_GATE.get());
+                        pOutput.accept(ModBlocks.WOITR_WALL.get());
+                        pOutput.accept(ModBlocks.WOITR_DOOR.get());
+                        pOutput.accept(ModBlocks.WOITR_TRAPDOOR.get());
+
+
 
                     })
                     .build());

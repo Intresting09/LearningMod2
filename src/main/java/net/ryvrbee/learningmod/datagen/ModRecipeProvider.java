@@ -2,10 +2,12 @@ package net.ryvrbee.learningmod.datagen;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
+import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.ryvrbee.learningmod.LearningMod;
 import net.ryvrbee.learningmod.block.ModBlocks;
@@ -31,13 +33,34 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("GGG")
                 .pattern("GGG")
                 .pattern("GGG")
-                .define("G", ModItems.WOITR_GEM.get())
+                .define('G', ModItems.WOITR_GEM.get())
                 .unlockedBy(getHasName(ModItems.WOITR_GEM.get()), has(ModItems.WOITR_GEM.get()))
                 .save(pWriter);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.WOITR_GEM.get(), 9)
-                .requires(ModBlocks.WOITR_GEM_BLOCK)
+                .requires(ModBlocks.WOITR_GEM_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.WOITR_GEM_BLOCK.get()), has(ModBlocks.WOITR_GEM_BLOCK.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.WOITR_GEM_BLOCK.get())
+                .pattern("WWW")
+                .pattern("WWW")
+                .pattern("WWW")
+                .define('W', ModItems.WOITR.get())
+                .unlockedBy(getHasName(ModItems.WOITR.get()), has(ModItems.WOITR.get()))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.WOITR.get(), 9)
+                .requires(ModBlocks.RAW_WOITR_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.RAW_WOITR_BLOCK.get()), has(ModBlocks.RAW_WOITR_BLOCK.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.WOITR_WAND.get())
+                .pattern("  B")
+                .pattern(" S ")
+                .pattern("S  ")
+                .define('S', Items.STICK)
+                .define('B', ModBlocks.WOITR_GEM_BLOCK.get())
                 .save(pWriter);
     }
 
@@ -50,9 +73,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     }
 
     protected static void oreCooking(Consumer<FinishedRecipe> pFinishedRecipeConsumer, RecipeSerializer<? extends AbstractCookingRecipe> pCookingSerializer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pRecipeName) {
-        for(ItemLike itemlike : pIngredients) {
+        for (ItemLike itemlike : pIngredients) {
             SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), pCategory, pResult, pExperience, pCookingTime,
-                    pCookingSerializer).group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
+                            pCookingSerializer).group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
                     .save(pFinishedRecipeConsumer, LearningMod.MOD_ID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
         }
+    }
 }
+

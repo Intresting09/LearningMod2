@@ -9,6 +9,16 @@
   "block.learningmod.woitr_gem_block": "Woitr Gem Block",
   "block.learningmod.woitr_ore": "Woitr Ore",
 
+  "block.learningmod.woitr_stairs": "Woitr Stairs",
+  "block.learningmod.woitr_slab": "Woitr Slab",
+  "block.learningmod.woitr_button": "Woitr Button",
+  "block.learningmod.woitr_pressure_plate": "Woitr Pressure Plate",
+  "block.learningmod.woitr_fence": "Woitr Fence",
+  "block.learningmod.woitr_fence_gate": "Woitr Fence Gate",
+  "block.learningmod.woitr_wall": "Woitr Wall",
+  "block.learningmod.woitr_door": "Woitr Door",
+  "block.learningmod.woitr_trapdoor": "Woitr Trapdoor",
+
   "tooltip.learningmod.woitr_wand": "Waterlogs blocks",
 
   "creativetab.learning_tab": "Learning Shit"
